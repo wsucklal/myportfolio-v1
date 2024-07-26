@@ -58,7 +58,7 @@ const EmailForm: React.FC = () => {
   };
 
   return (
-    <Box p={8} maxWidth="500px" mx="auto">
+    <Box p={8} maxWidth="600px" mx="auto">
       <form onSubmit={handleSubmit}>
         <FormControl id="name" isRequired>
           <FormLabel>Name</FormLabel>

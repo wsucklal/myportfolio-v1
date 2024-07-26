@@ -1,8 +1,11 @@
 // src/sections/Contact.tsx
 import React from 'react';
-import { Icon, Box, Heading, LinkBox, Text, Flex, Stack, HStack, Link, Card, CardHeader, Divider, LinkOverlay, SimpleGrid, CardBody, AbsoluteCenter} from '@chakra-ui/react';
+import { Icon, Box, Heading, Text, Flex, Stack, HStack, Link, Card, CardHeader, Divider, LinkOverlay, SimpleGrid, CardBody, AbsoluteCenter, StackDivider} from '@chakra-ui/react';
+import './Contact.css';
 
 import {SocialIcon} from 'react-social-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPersonDigging } from '@fortawesome/free-solid-svg-icons';
 
 import EmailForm from '../components/EmailFormComponent';
 import SlideFadeSection from '../components/SlideFadeSection';
@@ -49,7 +52,7 @@ const Contact: React.FC = () => {
                         </Box>
                       </Flex>
                     </Flex>
-                  </CardHeader>
+                </CardHeader>
                   <CardBody>
                     <Text>
                     Connect with me on LinkedIn to explore my professional journey and latest projects.
@@ -74,6 +77,33 @@ const Contact: React.FC = () => {
                     </Text>
                   </CardBody>
             </LinkBoxCard>
+            <Card
+            direction={{base: 'column', sm: 'row'}}
+            _hover={{ bg:'lightgray', transform: "scale(1.05)", rounded:'md', boxShadow:'lg', borderRadius:'md' }}
+            >
+            <CardHeader>
+              <Flex>
+              <Flex flex='1' gap='4' alignItems='center'>
+                  <div className="circular-border">
+                    <FontAwesomeIcon icon={faPersonDigging} />
+                  </div>
+                  <Box>
+                    <Heading size='md'>Coming Soon</Heading>
+                  </Box>
+                </Flex>
+              </Flex>
+            </CardHeader>
+              <CardBody>
+                <HStack 
+                direction={['column', 'row']}
+                divider={<StackDivider borderColor='gray.200' />}
+                >
+                <SocialIcon network="twitch" label="Twitter Profile"/>
+                <SocialIcon network="upwork"/>
+                <SocialIcon network="youtube"/>
+                </HStack>
+              </CardBody>
+            </Card>
           </Stack>
         </SlideFadeSection>
         <SlideFadeSection delay={600}>

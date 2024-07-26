@@ -10,10 +10,11 @@ interface LinkBoxCardProps {
 const LinkBoxCard : React.FC<LinkBoxCardProps> = ({children, linkOverlay}) => {
 
     return(
-        <LinkBox as='article' _hover={{ transform: "scale(1.05)", rounded:'md', boxShadow:'lg', borderRadius:'md' }}>
+        <LinkBox as='article' _hover={{ transform: "scale(1.05)", rounded:'md', boxShadow:'lg', borderRadius:'md', borderColor:'purple'}}>
         <LinkOverlay href={linkOverlay}>
           <Card 
           direction={{base: 'column', sm: 'row'}}
+          p={1}
           >
             {children}
           </Card>
